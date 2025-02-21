@@ -33,10 +33,10 @@ public class CarController : MonoBehaviour{
         rb = gameObject.GetComponent<Rigidbody>();
 
     }
-    void Update(){
+    void FixedUpdate(){
+        
         speed = rb.linearVelocity.magnitude;
-
-        getInput();
+        slipAngle = Vector3.Angle(transform.forward,rb.linearVelocity);
 
 
         FLWheel.update();
@@ -53,10 +53,11 @@ public class CarController : MonoBehaviour{
         brake();
     }
 
-    void getInput(){
-        gasIn = Input.GetAxis("Vertical");
-        steeringIn = Input.GetAxis("Horizontal");
-        slipAngle = Vector3.Angle(transform.forward,rb.linearVelocity);
+    public void getInput(float x, float y){
+
+        gasIn = y;
+        steeringIn = x;
+        
 
         if(gasIn < 0){
             brakeIn = Mathf.Abs(gasIn);
