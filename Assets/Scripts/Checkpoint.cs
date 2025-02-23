@@ -15,24 +15,25 @@ public class Checkpoint : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other){
+        CarAgent carAgent = other.GetComponent<CarAgent>();
         
         if(valid){
-            Debug.Log("Check");
             SetInvalid();
             controller.CheckpointTriggered();
+            carAgent.AddReward(5f);
         }else
-            other.GetComponent<CarAgent>().AddReward(-5f);
+            carAgent.AddReward(-5f);
         
     }
 
     void SetInvalid(){
         valid = false;
+        gameObject.tag = "InvalidCheckpoint";
         render.enabled = false;
-        //  Desactivar ser visible por raycasts
     }
     public void Restart(){
         valid = true;
+        gameObject.tag = "Checkpoint";
         render.enabled = true;
-        //  Activar ser visible por raycasts
     }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - Checkpoint
+  - InvalidCheckpoint
   layers:
   - Default
   - TransparentFX

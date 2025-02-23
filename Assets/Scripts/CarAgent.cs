@@ -19,7 +19,9 @@ public class CarAgent : Agent
     }
     public override void CollectObservations(VectorSensor sensor)
     {
-        base.CollectObservations(sensor);
+        
+
+        AddReward(-0.1f);
     }
     public override void OnActionReceived(ActionBuffers actions)
     {

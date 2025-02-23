@@ -29,7 +29,6 @@ public class CheckpointController : MonoBehaviour
             c.Restart();
     }
     public void CheckpointTriggered(){
-        carAgent.AddReward(5f);
         checkpointsNumber--;
         if(checkpointsNumber <= 0)
             carAgent.EndEpisode();

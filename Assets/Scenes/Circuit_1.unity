@@ -764,47 +764,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0337ce7ff888f71c8e1bf63802f297e, type: 3}
---- !u!1 &935200370 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8023366528033184556, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
-  m_PrefabInstance: {fileID: 1692555653}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &935200380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935200370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SensorName: RayForward
-  m_DetectableTags:
-  - Wall
-  - Checkpoint
-  m_RaysPerDirection: 3
-  m_MaxRayDegrees: 20
-  m_SphereCastRadius: 0.2
-  m_RayLength: 20
-  m_RayLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967291
-  m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
-  m_UseBatchedRaycasts: 0
-  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
-  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
-  m_StartVerticalOffset: 0.4
-  m_EndVerticalOffset: 0.4
 --- !u!114 &935200382 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -921581927121161607, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
   m_PrefabInstance: {fileID: 1692555653}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935200370}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38a1afdd355cc858881d550371e55bd9, type: 3}
@@ -1248,17 +1213,9 @@ PrefabInstance:
       propertyPath: checkpointController
       value: 
       objectReference: {fileID: 765939656}
-    - target: {fileID: 868916062050014400, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 868916062050014400, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
-      propertyPath: m_SensorName
-      value: RayPeripheral
-      objectReference: {fileID: 0}
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_BehaviorType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_BrainParameters.VectorActionSpaceType
@@ -1320,6 +1277,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3563901676680030782, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
+      propertyPath: DecisionPeriod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8023366528033184556, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_Name
       value: Mazda RX-7
@@ -1327,10 +1288,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8023366528033184556, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 935200380}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
 --- !u!1001 &1702293856
 PrefabInstance:
