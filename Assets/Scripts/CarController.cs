@@ -25,7 +25,7 @@ public class CarController : MonoBehaviour{
 
     public float decelerationMultiplier = 0.2f;
     public float stopVelocity = 0.2f;
-    
+
     
 
 
@@ -105,6 +105,23 @@ public class CarController : MonoBehaviour{
         FRWheel.collider.brakeTorque = brakeIn*brakesPower*frontBrakeMultiplier;
         RLWheel.collider.brakeTorque = brakeIn*brakesPower*rearBrakeMultiplier;
         RRWheel.collider.brakeTorque = brakeIn*brakesPower*rearBrakeMultiplier;
+    }
+    public void InitPosition(){
+        float x = UnityEngine.Random.Range(2.5f,7.5f);
+        float y = 0.115f;
+        float z = UnityEngine.Random.Range(-17.8f,-2.2f);
+
+        transform.position = new Vector3(x,y,z);
+        transform.rotation = new Quaternion();
+        rb.linearVelocity = Vector3.zero;
+        RLWheel.collider.motorTorque = 0f;
+        RRWheel.collider.motorTorque = 0f;
+        FLWheel.collider.steerAngle = 0f;
+        FRWheel.collider.steerAngle = 0f;
+
+        gasIn = 0f;
+        brakeIn = 0f;
+        steeringIn = 0f;
     }
 }
 [System.Serializable]

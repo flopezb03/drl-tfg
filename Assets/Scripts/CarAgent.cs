@@ -10,6 +10,7 @@ public class CarAgent : Agent
 {
     private Rigidbody rb;
     private CarController carController;
+    public CheckpointController checkpointController;
 
     public override void Initialize()
     {
@@ -39,6 +40,7 @@ public class CarAgent : Agent
     }
     public override void OnEpisodeBegin()
     {
-        base.OnEpisodeBegin();
+        checkpointController.Restart();
+        carController.InitPosition();
     }
 }
