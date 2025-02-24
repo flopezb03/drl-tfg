@@ -8,17 +8,19 @@ using Unity.MLAgents.Policies;
 
 public class CarAgent : Agent
 {
-    private Rigidbody rb;
     private CarController carController;
     public CheckpointController checkpointController;
 
     public override void Initialize()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
         carController = gameObject.GetComponent<CarController>();
     }
     public override void CollectObservations(VectorSensor sensor)
     {
+        sensor.AddObservation(transform.forward);
+        sensor.AddObservation(carController.speed);
+        sensor.AddObservation(carController.slipAngle);
+        sensor.AddObservation(carController.steerAngle);
         
 
         AddReward(-0.1f);

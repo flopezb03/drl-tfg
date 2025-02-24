@@ -18,11 +18,14 @@ public class Checkpoint : MonoBehaviour
         CarAgent carAgent = other.GetComponent<CarAgent>();
         
         if(valid){
+            Debug.Log("Check");
             SetInvalid();
             controller.CheckpointTriggered();
             carAgent.AddReward(5f);
-        }else
+        }else{
+            Debug.Log("INVALID");
             carAgent.AddReward(-5f);
+        }
         
     }
 

@@ -18,6 +18,7 @@ public class CheckpointController : MonoBehaviour
         time -= Time.deltaTime;
 
         if (time <= 0){
+            time = 60f;
             carAgent.AddReward(-20f);
             carAgent.EndEpisode();
         }

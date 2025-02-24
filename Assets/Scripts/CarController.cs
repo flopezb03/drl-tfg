@@ -20,7 +20,8 @@ public class CarController : MonoBehaviour{
     public float brakesPower;
     public float maxSpeed = 30;
 
-    public float speed;
+    public Vector3 speed;
+    public float steerAngle;
 
 
     public float decelerationMultiplier = 0.2f;
@@ -35,7 +36,7 @@ public class CarController : MonoBehaviour{
     }
     void FixedUpdate(){
         
-        speed = rb.linearVelocity.magnitude;
+        speed = rb.linearVelocity;
         slipAngle = Vector3.Angle(transform.forward,rb.linearVelocity);
 
 
@@ -78,20 +79,20 @@ public class CarController : MonoBehaviour{
     }
     
     void steer(){
-        float maxSteerAngle = Mathf.Lerp(60, 20, Mathf.InverseLerp(0, maxSpeed, speed));
+        float maxSteerAngle = Mathf.Lerp(60, 20, Mathf.InverseLerp(0, maxSpeed, speed.magnitude));
 
-        float angle = steeringIn*maxSteerAngle;
+        steerAngle = steeringIn*maxSteerAngle;
 
         //  Countersteer
         if (slipAngle < 60f){
             float counterSteer = Vector3.SignedAngle(transform.forward, rb.linearVelocity + transform.forward, Vector3.up);
-            angle += Mathf.Lerp(0, counterSteer, 0.5f);
+            steerAngle += Mathf.Lerp(0, counterSteer, 0.5f);
 
         }
-        angle = Mathf.Clamp(angle, -maxSteerAngle, maxSteerAngle);
+        steerAngle = Mathf.Clamp(steerAngle, -maxSteerAngle, maxSteerAngle);
 
-        FLWheel.collider.steerAngle = angle;
-        FRWheel.collider.steerAngle = angle;
+        FLWheel.collider.steerAngle = steerAngle;
+        FRWheel.collider.steerAngle = steerAngle;
     }
     
     void brake(){
@@ -122,6 +123,7 @@ public class CarController : MonoBehaviour{
         gasIn = 0f;
         brakeIn = 0f;
         steeringIn = 0f;
+        steerAngle = 0f;
     }
 }
 [System.Serializable]
