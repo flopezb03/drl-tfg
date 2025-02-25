@@ -743,6 +743,7 @@ GameObject:
   - component: {fileID: 3563901676680030782}
   - component: {fileID: 868916062050014400}
   - component: {fileID: 1627183647325715619}
+  - component: {fileID: 8120744277490463937}
   m_Layer: 0
   m_Name: Mazda RX-7
   m_TagString: Untagged
@@ -911,7 +912,8 @@ MonoBehaviour:
   motorPower: 700
   brakesPower: 100000
   maxSpeed: 30
-  speed: 0
+  speed: {x: 0, y: 0, z: 0}
+  steerAngle: 0
   decelerationMultiplier: 0.2
   stopVelocity: 0.2
 --- !u!114 &1074716973741299832
@@ -927,18 +929,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
+    VectorObservationSize: 8
     NumStackedVectorObservations: 1
     m_ActionSpec:
-      m_NumContinuousActions: 0
-      BranchSizes: 01000000
-    VectorActionSize: 01000000
+      m_NumContinuousActions: 2
+      BranchSizes: 
+    VectorActionSize: 02000000
     VectorActionDescriptions: []
-    VectorActionSpaceType: 0
+    VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: 083b578d8b460287fb721ba9ccb01532, type: 3}
   m_InferenceDevice: 0
-  m_BehaviorType: 0
+  m_BehaviorType: 2
   m_BehaviorName: CarAgent
   TeamId: 0
   m_UseChildSensors: 1
@@ -961,7 +963,6 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
-  checkpointController: {fileID: 0}
 --- !u!114 &3563901676680030782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -974,7 +975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecisionPeriod: 5
+  DecisionPeriod: 1
   DecisionStep: 0
   TakeActionsBetweenDecisions: 1
 --- !u!114 &868916062050014400
@@ -1026,7 +1027,7 @@ MonoBehaviour:
   - Checkpoint
   - InvalidCheckpoint
   m_RaysPerDirection: 3
-  m_MaxRayDegrees: 20
+  m_MaxRayDegrees: 30
   m_SphereCastRadius: 0.2
   m_RayLength: 20
   m_RayLayerMask:
@@ -1039,6 +1040,18 @@ MonoBehaviour:
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
   m_StartVerticalOffset: 0.4
   m_EndVerticalOffset: 0.4
+--- !u!114 &8120744277490463937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8023366528033184556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d139274c31ab68311a555469d9de67a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8665293846929159817
 GameObject:
   m_ObjectHideFlags: 0

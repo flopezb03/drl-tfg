@@ -1,37 +1,54 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CheckpointController : MonoBehaviour
 {
-    public CarAgent carAgent;
-    private List<Checkpoint> checkpoints;
+    private const float TIMEOUT = 60f;
+    private CarAgent carAgent;
 
-    private float time = 60f;
+    private float time = TIMEOUT;
     private int checkpointsNumber;
+    private Dictionary<Checkpoint,Boolean> cpDict = new Dictionary<Checkpoint, bool>();
 
-    void Start(){
-        checkpoints = new List<Checkpoint>(GetComponentsInChildren<Checkpoint>());
-        checkpointsNumber = checkpoints.Count;
+    void Awake(){
+        carAgent = GetComponent<CarAgent>();
+        
+        foreach(Checkpoint cp in GameObject.Find("Checkpoints").GetComponentsInChildren<Checkpoint>()){
+            cpDict.Add(cp, true);
+        }
+        checkpointsNumber = cpDict.Keys.Count;
     }
 
     void Update(){
         time -= Time.deltaTime;
-
+        
         if (time <= 0){
-            time = 60f;
+            time = TIMEOUT;
             carAgent.AddReward(-20f);
             carAgent.EndEpisode();
         }
     }
 
     public void Restart(){
-        checkpointsNumber = checkpoints.Count;
-        foreach(Checkpoint c in checkpoints)
-            c.Restart();
+        foreach(Checkpoint cp in cpDict.Keys.ToList()){
+            cpDict[cp] = true;
+        }
+        checkpointsNumber = cpDict.Keys.Count;
+        time = TIMEOUT;
     }
-    public void CheckpointTriggered(){
-        checkpointsNumber--;
-        if(checkpointsNumber <= 0)
+    public void CheckpointTriggered(Checkpoint cp){
+        if(cpDict[cp]){
+            carAgent.AddReward(5f);
+
+            cpDict[cp] = false;
+            checkpointsNumber--;
+            if(checkpointsNumber <= 0)
+                carAgent.EndEpisode();
+        }else{
+            carAgent.AddReward(-20f);
             carAgent.EndEpisode();
+        }
     }
 }

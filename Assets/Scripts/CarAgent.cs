@@ -9,11 +9,12 @@ using Unity.MLAgents.Policies;
 public class CarAgent : Agent
 {
     private CarController carController;
-    public CheckpointController checkpointController;
+    private CheckpointController checkpointController;
 
     public override void Initialize()
     {
-        carController = gameObject.GetComponent<CarController>();
+        carController = GetComponent<CarController>();
+        checkpointController = GetComponent<CheckpointController>();
     }
     public override void CollectObservations(VectorSensor sensor)
     {
