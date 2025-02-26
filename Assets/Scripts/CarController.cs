@@ -110,9 +110,9 @@ public class CarController : MonoBehaviour{
     public void InitPosition(){
         float x = UnityEngine.Random.Range(2.5f,7.5f);
         float y = 0.115f;
-        float z = UnityEngine.Random.Range(-17.8f,-12.2f);
+        float z = UnityEngine.Random.Range(-37.8f,-22.2f);
 
-        transform.position = new Vector3(x,y,z);
+        transform.localPosition = new Vector3(x,y,z);
         transform.rotation = new Quaternion();
         rb.linearVelocity = Vector3.zero;
         RLWheel.collider.motorTorque = 0f;

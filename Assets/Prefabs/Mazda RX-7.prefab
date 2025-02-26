@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 607943609192293988}
   - component: {fileID: 6175754606875825499}
   - component: {fileID: 6665966595611102143}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RRWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7933061325157177812}
   - component: {fileID: 965287775551628413}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FRWheel Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4628762563421613200}
   - component: {fileID: 7969295880294487829}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RRWheel Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 3871501985013004796}
   - component: {fileID: 599783251899368133}
   - component: {fileID: 8131760085395665864}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FRWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 716568197323148095}
   - component: {fileID: 1868823744002304944}
   - component: {fileID: 3959606881713388712}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RLWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 793693671357604577}
   - component: {fileID: 2524925700637921883}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RLWheel Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3652239311830483256}
   - component: {fileID: 7963879430880315689}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FLWheel Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,7 +559,7 @@ GameObject:
   - component: {fileID: 5896335465179301010}
   - component: {fileID: 5592902596419129987}
   - component: {fileID: 2638888477728427843}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -647,7 +647,7 @@ GameObject:
   - component: {fileID: 4157527288300561576}
   - component: {fileID: 3977222875558212715}
   - component: {fileID: 4585541790593433102}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FLWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -744,7 +744,7 @@ GameObject:
   - component: {fileID: 868916062050014400}
   - component: {fileID: 1627183647325715619}
   - component: {fileID: 8120744277490463937}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mazda RX-7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,8 +760,8 @@ Transform:
   m_GameObject: {fileID: 8023366528033184556}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.411, y: 0.18, z: 4.346}
-  m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5896335465179301010}
@@ -846,7 +846,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -994,14 +994,13 @@ MonoBehaviour:
   m_DetectableTags:
   - Wall
   - Checkpoint
-  - InvalidCheckpoint
   m_RaysPerDirection: 4
   m_MaxRayDegrees: 80
   m_SphereCastRadius: 0.2
   m_RayLength: 20
   m_RayLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967291
+    m_Bits: 55
   m_ObservationStacks: 1
   m_AlternatingRayOrder: 1
   m_UseBatchedRaycasts: 0
@@ -1025,14 +1024,13 @@ MonoBehaviour:
   m_DetectableTags:
   - Wall
   - Checkpoint
-  - InvalidCheckpoint
   m_RaysPerDirection: 3
   m_MaxRayDegrees: 30
   m_SphereCastRadius: 0.2
   m_RayLength: 20
   m_RayLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967291
+    m_Bits: 55
   m_ObservationStacks: 1
   m_AlternatingRayOrder: 1
   m_UseBatchedRaycasts: 0
@@ -1061,7 +1059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1941519261101523305}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
