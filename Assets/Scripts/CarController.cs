@@ -68,8 +68,10 @@ public class CarController : MonoBehaviour{
         }
     }
     void accelerate(){
-        RLWheel.collider.motorTorque = motorPower*gasIn;
-        RRWheel.collider.motorTorque = motorPower*gasIn;
+        if(speed.magnitude < maxSpeed){
+            RLWheel.collider.motorTorque = motorPower*gasIn;
+            RRWheel.collider.motorTorque = motorPower*gasIn;
+        }
     }
     void deccelerate(){
         rb.linearVelocity = rb.linearVelocity * (1f / (1f + (0.025f * decelerationMultiplier)));

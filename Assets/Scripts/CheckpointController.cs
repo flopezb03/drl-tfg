@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CheckpointController : MonoBehaviour
 {
-    private const float TIMEOUT = 60f;
+    private const float TIMEOUT = 180f;
     private CarAgent carAgent;
 
     private float time = TIMEOUT;
@@ -26,7 +26,7 @@ public class CheckpointController : MonoBehaviour
         
         if (time <= 0){
             time = TIMEOUT;
-            carAgent.AddReward(-20f);
+            carAgent.AddReward(-1f);
             carAgent.EndEpisode();
         }
     }
@@ -40,14 +40,14 @@ public class CheckpointController : MonoBehaviour
     }
     public void CheckpointTriggered(Checkpoint cp){
         if(cpDict[cp]){
-            carAgent.AddReward(5f);
+            carAgent.AddReward(0.2f);
 
             cpDict[cp] = false;
             checkpointsNumber--;
             if(checkpointsNumber <= 0)
                 carAgent.EndEpisode();
         }else{
-            carAgent.AddReward(-20f);
+            carAgent.AddReward(-1f);
             carAgent.EndEpisode();
         }
     }

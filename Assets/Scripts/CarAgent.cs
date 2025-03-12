@@ -18,13 +18,16 @@ public class CarAgent : Agent
     }
     public override void CollectObservations(VectorSensor sensor)
     {
+        // Datos normalizados para mayor estabilidad en el entrenamiento
+        Vector3 norm_speed = carController.speed/carController.maxSpeed;
         sensor.AddObservation(transform.forward);
-        sensor.AddObservation(carController.speed);
-        sensor.AddObservation(carController.slipAngle);
-        sensor.AddObservation(carController.steerAngle);
+        sensor.AddObservation(norm_speed);
+        sensor.AddObservation(carController.slipAngle/180-1);
+        sensor.AddObservation(carController.steerAngle/180-1);
         
-
-        AddReward(-0.1f);
+        //  Recompensar llegar antes y tener velocidad
+        AddReward(-0.0005f);
+        AddReward(Mathf.Lerp(0.0001f,0.0005f,norm_speed.magnitude));
     }
     public override void OnActionReceived(ActionBuffers actions)
     {

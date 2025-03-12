@@ -930,7 +930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BrainParameters:
     VectorObservationSize: 8
-    NumStackedVectorObservations: 1
+    NumStackedVectorObservations: 11
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -940,7 +940,7 @@ MonoBehaviour:
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 5022602860645237092, guid: 083b578d8b460287fb721ba9ccb01532, type: 3}
   m_InferenceDevice: 0
-  m_BehaviorType: 2
+  m_BehaviorType: 0
   m_BehaviorName: CarAgent
   TeamId: 0
   m_UseChildSensors: 1
@@ -975,7 +975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecisionPeriod: 1
+  DecisionPeriod: 5
   DecisionStep: 0
   TakeActionsBetweenDecisions: 1
 --- !u!114 &868916062050014400
@@ -996,14 +996,14 @@ MonoBehaviour:
   - Checkpoint
   m_RaysPerDirection: 4
   m_MaxRayDegrees: 80
-  m_SphereCastRadius: 0.2
+  m_SphereCastRadius: 0
   m_RayLength: 20
   m_RayLayerMask:
     serializedVersion: 2
     m_Bits: 55
-  m_ObservationStacks: 1
+  m_ObservationStacks: 11
   m_AlternatingRayOrder: 1
-  m_UseBatchedRaycasts: 0
+  m_UseBatchedRaycasts: 1
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
   m_StartVerticalOffset: 0.4
@@ -1026,14 +1026,14 @@ MonoBehaviour:
   - Checkpoint
   m_RaysPerDirection: 3
   m_MaxRayDegrees: 30
-  m_SphereCastRadius: 0.2
+  m_SphereCastRadius: 0
   m_RayLength: 20
   m_RayLayerMask:
     serializedVersion: 2
     m_Bits: 55
-  m_ObservationStacks: 1
+  m_ObservationStacks: 11
   m_AlternatingRayOrder: 1
-  m_UseBatchedRaycasts: 0
+  m_UseBatchedRaycasts: 1
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
   m_StartVerticalOffset: 0.4
