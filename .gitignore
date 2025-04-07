@@ -95,5 +95,11 @@ crashlytics-build.properties
 
 # End of https://www.toptal.com/developers/gitignore/api/unity,visualstudiocode
 
+Temp/*
+Logs/*
+
 results/*
 configs/*
+builds/*
+
+drl-tfg_BurstDebugInformation_DoNotShip

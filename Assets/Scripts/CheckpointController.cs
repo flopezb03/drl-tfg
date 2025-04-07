@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CheckpointController : MonoBehaviour
 {
-    private const float TIMEOUT = 180f;
+    private const float TIMEOUT = 500f;
     private CarAgent carAgent;
 
     private float time = TIMEOUT;
@@ -14,8 +14,10 @@ public class CheckpointController : MonoBehaviour
 
     void Awake(){
         carAgent = GetComponent<CarAgent>();
+        Transform circuit = transform.parent.parent;
+        Transform checkpoints = circuit.Find("Checkpoints");
         
-        foreach(Checkpoint cp in GameObject.Find("Checkpoints").GetComponentsInChildren<Checkpoint>()){
+        foreach(Checkpoint cp in checkpoints.GetComponentsInChildren<Checkpoint>()){
             cpDict.Add(cp, true);
         }
         checkpointsNumber = cpDict.Keys.Count;
