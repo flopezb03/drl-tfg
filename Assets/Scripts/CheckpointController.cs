@@ -2,13 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CheckpointController : MonoBehaviour
 {
-    private const float TIMEOUT = 500f;
+    private  float timeout;
     private CarAgent carAgent;
 
-    private float time = TIMEOUT;
+    private float time;
     private int checkpointsNumber;
     private Dictionary<Checkpoint,Boolean> cpDict = new Dictionary<Checkpoint, bool>();
 
@@ -21,13 +22,22 @@ public class CheckpointController : MonoBehaviour
             cpDict.Add(cp, true);
         }
         checkpointsNumber = cpDict.Keys.Count;
+
+
+        if(SceneManager.GetActiveScene().name == "Circuit_1")
+            timeout = 180f;
+        else if(SceneManager.GetActiveScene().name == "Reorientation")
+            timeout = 30f;
+        
+
+        time = timeout;
     }
 
     void Update(){
         time -= Time.deltaTime;
         
         if (time <= 0){
-            time = TIMEOUT;
+            time = timeout;
             carAgent.AddReward(-1f);
             carAgent.EndEpisode();
         }
@@ -38,7 +48,7 @@ public class CheckpointController : MonoBehaviour
             cpDict[cp] = true;
         }
         checkpointsNumber = cpDict.Keys.Count;
-        time = TIMEOUT;
+        time = timeout;
     }
     public void CheckpointTriggered(Checkpoint cp){
         if(cpDict[cp]){

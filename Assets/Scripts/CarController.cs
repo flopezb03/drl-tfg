@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CarController : MonoBehaviour{
 
@@ -26,10 +27,7 @@ public class CarController : MonoBehaviour{
 
     public float decelerationMultiplier = 0.2f;
     public float stopVelocity = 0.2f;
-
     
-
-
     void Start(){
         rb = gameObject.GetComponent<Rigidbody>();
 
@@ -110,12 +108,31 @@ public class CarController : MonoBehaviour{
         RRWheel.collider.brakeTorque = brakeIn*brakesPower*rearBrakeMultiplier;
     }
     public void InitPosition(){
-        float x = UnityEngine.Random.Range(2.5f,7.5f);
-        float y = 0.115f;
-        float z = UnityEngine.Random.Range(-37.8f,-22.2f);
+        float x;
+        float y;
+        float z;
+        Quaternion rot;
 
+        if(SceneManager.GetActiveScene().name == "Reorientation"){
+            x = 0;
+            y = 0.115f;
+            z = 0;
+
+            float randAngle = UnityEngine.Random.Range(30f,90f);
+            if(UnityEngine.Random.Range(0f,1f)> 0.5)
+                randAngle = -randAngle;
+                
+            rot = Quaternion.Euler(0, randAngle, 0);
+        }else{
+            x = UnityEngine.Random.Range(2.5f,7.5f);
+            y = 0f;
+            z = UnityEngine.Random.Range(-37.8f,-22.2f);
+            rot = new Quaternion();
+        }
+        
         transform.localPosition = new Vector3(x,y,z);
-        transform.rotation = new Quaternion();
+        transform.rotation = rot;
+
         rb.linearVelocity = Vector3.zero;
         RLWheel.collider.motorTorque = 0f;
         RRWheel.collider.motorTorque = 0f;
