@@ -24,10 +24,19 @@ public class CheckpointController : MonoBehaviour
         checkpointsNumber = cpDict.Keys.Count;
 
 
-        if(SceneManager.GetActiveScene().name == "Circuit_1")
+        if(SceneManager.GetActiveScene().name == "Forward")
             timeout = 180f;
         else if(SceneManager.GetActiveScene().name == "Reorientation")
             timeout = 30f;
+        else if(SceneManager.GetActiveScene().name == "CurvesMedium")
+            timeout = 40f;
+        else if(SceneManager.GetActiveScene().name == "CurvesLarge")
+            timeout = 60f;
+        else if(SceneManager.GetActiveScene().name == "Curves")
+            timeout = 60f;
+        else if(SceneManager.GetActiveScene().name == "Circuit_1")
+            timeout = 90f;
+
         
 
         time = timeout;

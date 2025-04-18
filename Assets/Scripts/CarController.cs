@@ -115,7 +115,7 @@ public class CarController : MonoBehaviour{
 
         if(SceneManager.GetActiveScene().name == "Reorientation"){
             x = 0;
-            y = 0.115f;
+            y = 0.3f;
             z = 0;
 
             float randAngle = UnityEngine.Random.Range(30f,90f);
@@ -125,7 +125,7 @@ public class CarController : MonoBehaviour{
             rot = Quaternion.Euler(0, randAngle, 0);
         }else{
             x = UnityEngine.Random.Range(2.5f,7.5f);
-            y = 0f;
+            y = 0.3f;
             z = UnityEngine.Random.Range(-37.8f,-22.2f);
             rot = new Quaternion();
         }
