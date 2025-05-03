@@ -357,6 +357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: roadCornerLarge (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -691,7 +695,7 @@ PrefabInstance:
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: aa8507277fa4c629db26a3cbb80afac3, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 6032e7a7e9acfab95929976dc2d010e2, type: 3}
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_BehaviorType
       value: 0
@@ -806,6 +810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: roadCornerLarge (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -910,7 +918,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1510088812073859564, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
 --- !u!1001 &304604045
@@ -964,6 +972,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
       propertyPath: m_Name
       value: roadCornerLarge (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
+      propertyPath: m_TagString
+      value: Road
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1105,8 +1117,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 85
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1131,7 +1143,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 5, y: 60, z: -10}
+  m_LocalPosition: {x: 5, y: 60, z: 40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1233,6 +1245,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: roadCornerLarge (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1298,6 +1314,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: roadCornerLarge (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1322,7 +1342,7 @@ PrefabInstance:
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: aa8507277fa4c629db26a3cbb80afac3, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 6032e7a7e9acfab95929976dc2d010e2, type: 3}
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_BehaviorType
       value: 0
@@ -1749,6 +1769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: roadCornerLarge (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1781,7 +1805,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1510088812073859564, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
 --- !u!1001 &484098292
@@ -1903,6 +1927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: roadStartPositions
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32d3cee3a39536e878bbc7252ebf4c31, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1925,7 +1953,7 @@ PrefabInstance:
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: aa8507277fa4c629db26a3cbb80afac3, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 6032e7a7e9acfab95929976dc2d010e2, type: 3}
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_BehaviorType
       value: 0
@@ -2034,7 +2062,7 @@ PrefabInstance:
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: aa8507277fa4c629db26a3cbb80afac3, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 6032e7a7e9acfab95929976dc2d010e2, type: 3}
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_BehaviorType
       value: 0
@@ -2149,6 +2177,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: roadCornerLarge (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2186,7 +2218,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1510088812073859564, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
 --- !u!1001 &642389099
@@ -2307,6 +2339,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
       propertyPath: m_Name
       value: roadCornerLarge (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
+      propertyPath: m_TagString
+      value: Road
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2555,6 +2591,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
       propertyPath: m_Name
       value: roadCornerLarge
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
+      propertyPath: m_TagString
+      value: Road
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2980,6 +3020,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: roadCornerLarge (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3012,7 +3056,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1510088812073859564, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
 --- !u!1001 &976016904
@@ -3142,7 +3186,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1510088812073859564, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
 --- !u!1001 &1004414403
@@ -3420,6 +3464,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: roadCornerLarge (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3568,7 +3616,7 @@ PrefabInstance:
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: aa8507277fa4c629db26a3cbb80afac3, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 6032e7a7e9acfab95929976dc2d010e2, type: 3}
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_BehaviorType
       value: 0
@@ -3650,7 +3698,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1510088812073859564, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
 --- !u!1001 &1107041732
@@ -3664,7 +3712,7 @@ PrefabInstance:
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: aa8507277fa4c629db26a3cbb80afac3, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 6032e7a7e9acfab95929976dc2d010e2, type: 3}
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_BehaviorType
       value: 0
@@ -3738,7 +3786,7 @@ PrefabInstance:
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: aa8507277fa4c629db26a3cbb80afac3, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 6032e7a7e9acfab95929976dc2d010e2, type: 3}
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_BehaviorType
       value: 0
@@ -3817,7 +3865,7 @@ PrefabInstance:
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: aa8507277fa4c629db26a3cbb80afac3, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 6032e7a7e9acfab95929976dc2d010e2, type: 3}
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_BehaviorType
       value: 0
@@ -3904,7 +3952,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1510088812073859564, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
 --- !u!1001 &1222170400
@@ -4034,7 +4082,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1510088812073859564, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
 --- !u!1001 &1295804603
@@ -4188,6 +4236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: roadCornerLarge (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4258,6 +4310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: roadCornerLarge (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4323,6 +4379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: roadStartPositions
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32d3cee3a39536e878bbc7252ebf4c31, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4363,7 +4423,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5994186404907023703, guid: 32d3cee3a39536e878bbc7252ebf4c31, type: 3}
 --- !u!64 &1407817274
@@ -4474,7 +4534,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1510088812073859564, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
 --- !u!1001 &1457288562
@@ -4874,6 +4934,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: roadStraightLong
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ec31cb0254cd9573c8bc1aae019080aa, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4906,7 +4970,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4921798496361452742, guid: ec31cb0254cd9573c8bc1aae019080aa, type: 3}
 --- !u!1001 &1597408636
@@ -5023,6 +5087,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: roadStraightLong
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ec31cb0254cd9573c8bc1aae019080aa, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5055,7 +5123,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4921798496361452742, guid: ec31cb0254cd9573c8bc1aae019080aa, type: 3}
 --- !u!1 &1646188200
@@ -5304,7 +5372,7 @@ PrefabInstance:
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: aa8507277fa4c629db26a3cbb80afac3, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 6032e7a7e9acfab95929976dc2d010e2, type: 3}
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_BehaviorType
       value: 0
@@ -5378,7 +5446,7 @@ PrefabInstance:
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: aa8507277fa4c629db26a3cbb80afac3, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 6032e7a7e9acfab95929976dc2d010e2, type: 3}
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_BehaviorType
       value: 0
@@ -5589,7 +5657,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1510088812073859564, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
 --- !u!1 &1766258155
@@ -5665,7 +5733,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1510088812073859564, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
 --- !u!1 &1890630429 stripped
@@ -5697,7 +5765,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5994186404907023703, guid: 32d3cee3a39536e878bbc7252ebf4c31, type: 3}
 --- !u!64 &1890630436
@@ -5774,6 +5842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: roadCornerLarge (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5806,7 +5878,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1510088812073859564, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
 --- !u!1001 &1971606099
@@ -5860,6 +5932,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
       propertyPath: m_Name
       value: roadCornerLarge
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
+      propertyPath: m_TagString
+      value: Road
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6128,7 +6204,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1510088812073859564, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
 --- !u!1001 &2047499057
@@ -6142,7 +6218,7 @@ PrefabInstance:
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: aa8507277fa4c629db26a3cbb80afac3, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 6032e7a7e9acfab95929976dc2d010e2, type: 3}
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_BehaviorType
       value: 0
@@ -6229,7 +6305,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1510088812073859564, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
 --- !u!1 &2086205142 stripped
@@ -6256,7 +6332,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1510088812073859564, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
 --- !u!1001 &2109986300
@@ -6373,6 +6449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: roadCornerLarge (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
+      propertyPath: m_TagString
+      value: Road
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6405,7 +6485,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1510088812073859564, guid: 8cbfb3b9356695a9e8f637e587cdd215, type: 3}
 --- !u!1001 &2125106333
@@ -6419,7 +6499,7 @@ PrefabInstance:
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: aa8507277fa4c629db26a3cbb80afac3, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 6032e7a7e9acfab95929976dc2d010e2, type: 3}
     - target: {fileID: 1074716973741299832, guid: dfa4496003b7c2498ab553a3b92ab798, type: 3}
       propertyPath: m_BehaviorType
       value: 0

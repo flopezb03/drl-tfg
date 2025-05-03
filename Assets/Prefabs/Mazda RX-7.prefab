@@ -548,68 +548,6 @@ WheelCollider:
   m_LayerOverridePriority: 0
   m_Enabled: 1
   m_ProvidesContacts: 0
---- !u!1 &6148295767669572434
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 597530497864463460}
-  - component: {fileID: 3059196882466426860}
-  m_Layer: 3
-  m_Name: Back
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &597530497864463460
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6148295767669572434}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2145229172278141033}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &3059196882466426860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6148295767669572434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SensorName: RayPerceptionSensor
-  m_DetectableTags:
-  - Wall
-  - Checkpoint
-  m_RaysPerDirection: 2
-  m_MaxRayDegrees: 40
-  m_SphereCastRadius: 0
-  m_RayLength: 40
-  m_RayLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967287
-  m_ObservationStacks: 11
-  m_AlternatingRayOrder: 1
-  m_UseBatchedRaycasts: 1
-  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
-  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
-  m_StartVerticalOffset: 0.4
-  m_EndVerticalOffset: 0.4
 --- !u!1 &7653090178216541889
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,6 +744,9 @@ GameObject:
   - component: {fileID: 868916062050014400}
   - component: {fileID: 1627183647325715619}
   - component: {fileID: 8120744277490463937}
+  - component: {fileID: 2301283385179549636}
+  - component: {fileID: 7796083412465313631}
+  - component: {fileID: 5590991983937733220}
   m_Layer: 3
   m_Name: Mazda RX-7
   m_TagString: Untagged
@@ -832,7 +773,6 @@ Transform:
   - {fileID: 716568197323148095}
   - {fileID: 607943609192293988}
   - {fileID: 1941519261101523305}
-  - {fileID: 597530497864463460}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6721998093655052568
@@ -1001,7 +941,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 083b578d8b460287fb721ba9ccb01532, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 1
   m_BehaviorType: 0
   m_BehaviorName: CarAgent
@@ -1057,6 +997,7 @@ MonoBehaviour:
   m_DetectableTags:
   - Wall
   - Checkpoint
+  - Road
   m_RaysPerDirection: 6
   m_MaxRayDegrees: 80
   m_SphereCastRadius: 0
@@ -1087,8 +1028,9 @@ MonoBehaviour:
   m_DetectableTags:
   - Wall
   - Checkpoint
+  - Road
   m_RaysPerDirection: 3
-  m_MaxRayDegrees: 30
+  m_MaxRayDegrees: 7
   m_SphereCastRadius: 0
   m_RayLength: 40
   m_RayLayerMask:
@@ -1113,6 +1055,99 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d139274c31ab68311a555469d9de67a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2301283385179549636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8023366528033184556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SensorName: RayUp
+  m_DetectableTags:
+  - Wall
+  - Checkpoint
+  - Road
+  m_RaysPerDirection: 2
+  m_MaxRayDegrees: 4
+  m_SphereCastRadius: 0
+  m_RayLength: 40
+  m_RayLayerMask:
+    serializedVersion: 2
+    m_Bits: 55
+  m_ObservationStacks: 11
+  m_AlternatingRayOrder: 1
+  m_UseBatchedRaycasts: 1
+  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
+  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
+  m_StartVerticalOffset: 0.5
+  m_EndVerticalOffset: 6.5
+--- !u!114 &7796083412465313631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8023366528033184556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SensorName: RayUp2
+  m_DetectableTags:
+  - Wall
+  - Checkpoint
+  - Road
+  m_RaysPerDirection: 2
+  m_MaxRayDegrees: 4
+  m_SphereCastRadius: 0
+  m_RayLength: 40
+  m_RayLayerMask:
+    serializedVersion: 2
+    m_Bits: 55
+  m_ObservationStacks: 11
+  m_AlternatingRayOrder: 1
+  m_UseBatchedRaycasts: 1
+  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
+  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
+  m_StartVerticalOffset: 0.4
+  m_EndVerticalOffset: 9
+--- !u!114 &5590991983937733220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8023366528033184556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SensorName: RayDown
+  m_DetectableTags:
+  - Wall
+  - Checkpoint
+  - Road
+  m_RaysPerDirection: 2
+  m_MaxRayDegrees: 4
+  m_SphereCastRadius: 0
+  m_RayLength: 40
+  m_RayLayerMask:
+    serializedVersion: 2
+    m_Bits: 55
+  m_ObservationStacks: 11
+  m_AlternatingRayOrder: 1
+  m_UseBatchedRaycasts: 1
+  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
+  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
+  m_StartVerticalOffset: 0.4
+  m_EndVerticalOffset: -8.8
 --- !u!1 &8665293846929159817
 GameObject:
   m_ObjectHideFlags: 0

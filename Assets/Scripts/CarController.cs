@@ -112,8 +112,13 @@ public class CarController : MonoBehaviour{
         float y;
         float z;
         Quaternion rot;
-
-        if(SceneManager.GetActiveScene().name == "Reorientation"){
+        
+        if(SceneManager.GetActiveScene().name == "Forward"){
+            x = UnityEngine.Random.Range(2.5f,7.5f);
+            y = 0.3f;
+            z = -22.2f;
+            rot = new Quaternion();
+        }else if(SceneManager.GetActiveScene().name == "Reorientation"){
             x = 0;
             y = 0.3f;
             z = 0;
@@ -132,10 +137,14 @@ public class CarController : MonoBehaviour{
         
         transform.localPosition = new Vector3(x,y,z);
         transform.rotation = rot;
-
-        rb.linearVelocity = Vector3.zero;
-        RLWheel.collider.motorTorque = 0f;
-        RRWheel.collider.motorTorque = 0f;
+        rb.angularVelocity = Vector3.zero;
+        if(SceneManager.GetActiveScene().name == "Hills")
+            rb.linearVelocity = new Vector3(0,0,15);
+        else{
+            rb.linearVelocity = Vector3.zero;
+            RLWheel.collider.motorTorque = 0f;
+            RRWheel.collider.motorTorque = 0f;
+        }
         FLWheel.collider.steerAngle = 0f;
         FRWheel.collider.steerAngle = 0f;
 

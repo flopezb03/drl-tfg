@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Wall
   - Checkpoint
-  - InvalidCheckpoint
+  - Road
   layers:
   - Default
   - TransparentFX
