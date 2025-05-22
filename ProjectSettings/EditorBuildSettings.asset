@@ -5,12 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Forward.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
     path: Assets/Scenes/Circuit_2.unity
-    guid: 464bf9ca89534b6cc8ae07b6fee94b5f
+    guid: a0e327dbe7bb4c92ba12ec8918abe250
   - enabled: 0
     path: Assets/Scenes/Reorientation.unity
     guid: 6fecd1ade8b96419cb88299102df038b
@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Curves.unity
     guid: 2c8972b56b63c330ea50acbd33f0d792
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Circuit_1.unity
     guid: 7253437f7a5a37e45aaf8eb440c58b46
   m_configObjects:
