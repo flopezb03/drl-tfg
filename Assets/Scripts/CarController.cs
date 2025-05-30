@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -27,7 +28,10 @@ public class CarController : MonoBehaviour{
 
     public float decelerationMultiplier = 0.2f;
     public float stopVelocity = 0.2f;
-    
+
+    public bool durabilityActive = false;
+    public int durability = 10;
+
     void Start(){
         rb = gameObject.GetComponent<Rigidbody>();
 
@@ -79,7 +83,7 @@ public class CarController : MonoBehaviour{
     }
     
     void steer(){
-        float maxSteerAngle = Mathf.Lerp(60, 20, Mathf.InverseLerp(0, maxSpeed, speed.magnitude));
+        float maxSteerAngle = 35f;
 
         steerAngle = steeringIn*maxSteerAngle;
 
@@ -107,40 +111,54 @@ public class CarController : MonoBehaviour{
         RLWheel.collider.brakeTorque = brakeIn*brakesPower*rearBrakeMultiplier;
         RRWheel.collider.brakeTorque = brakeIn*brakesPower*rearBrakeMultiplier;
     }
-    public void InitPosition(){
+    public void InitPosition()
+    {
         float x;
         float y;
         float z;
         Quaternion rot;
-        
-        if(SceneManager.GetActiveScene().name == "Forward"){
-            x = UnityEngine.Random.Range(2.5f,7.5f);
+
+        if (SceneManager.GetActiveScene().name == "Forward")
+        {
+            x = UnityEngine.Random.Range(2.5f, 7.5f);
             y = 0.3f;
             z = -22.2f;
             rot = new Quaternion();
-        }else if(SceneManager.GetActiveScene().name == "Reorientation"){
+        }
+        else if (SceneManager.GetActiveScene().name == "Reorientation")
+        {
             x = 0;
             y = 0.3f;
             z = 0;
 
-            float randAngle = UnityEngine.Random.Range(30f,90f);
-            if(UnityEngine.Random.Range(0f,1f)> 0.5)
+            float randAngle = UnityEngine.Random.Range(30f, 90f);
+            if (UnityEngine.Random.Range(0f, 1f) > 0.5)
                 randAngle = -randAngle;
-                
+
             rot = Quaternion.Euler(0, randAngle, 0);
-        }else{
-            x = UnityEngine.Random.Range(2.5f,7.5f);
+        }
+        else if (SceneManager.GetActiveScene().name == "Plane")
+        {
+            x = 0f;
             y = 0.3f;
-            z = UnityEngine.Random.Range(-37.8f,-22.2f);
+            z = 0;
             rot = new Quaternion();
         }
-        
-        transform.localPosition = new Vector3(x,y,z);
+        else
+        {
+            x = UnityEngine.Random.Range(2.5f, 7.5f);
+            y = 0.3f;
+            z = UnityEngine.Random.Range(-37.8f, -22.2f);
+            rot = new Quaternion();
+        }
+
+        transform.localPosition = new Vector3(x, y, z);
         transform.rotation = rot;
         rb.angularVelocity = Vector3.zero;
-        if(SceneManager.GetActiveScene().name == "Hills")
-            rb.linearVelocity = new Vector3(0,0,15);
-        else{
+        if (SceneManager.GetActiveScene().name == "Hills")
+            rb.linearVelocity = new Vector3(0, 0, 15);
+        else
+        {
             rb.linearVelocity = Vector3.zero;
             RLWheel.collider.motorTorque = 0f;
             RRWheel.collider.motorTorque = 0f;
@@ -152,6 +170,21 @@ public class CarController : MonoBehaviour{
         brakeIn = 0f;
         steeringIn = 0f;
         steerAngle = 0f;
+
+        if (durabilityActive)
+            durability = UnityEngine.Random.Range(0, 10);
+        WheelFrictionCurve wFriction = new WheelFrictionCurve();
+        wFriction.extremumSlip = Mathf.Lerp(0.7f, 0.2f,(float)durability / 10);
+        wFriction.asymptoteSlip = 1.2f;
+        wFriction.extremumValue = 0.5f;
+        wFriction.asymptoteValue = 0.75f;
+        wFriction.stiffness = 1f;
+
+        FLWheel.collider.sidewaysFriction = wFriction;
+        FRWheel.collider.sidewaysFriction = wFriction;
+        RLWheel.collider.sidewaysFriction = wFriction;
+        RRWheel.collider.sidewaysFriction = wFriction;
+
     }
 }
 [System.Serializable]
