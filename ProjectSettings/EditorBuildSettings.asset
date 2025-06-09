@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Forward.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
@@ -15,17 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Reorientation.unity
     guid: 6fecd1ade8b96419cb88299102df038b
   - enabled: 0
-    path: Assets/Scenes/CurvesLarge.unity
-    guid: cc887f4a9388834fc9bfff2be8b71ed7
-  - enabled: 0
-    path: Assets/Scenes/CurvesMedium.unity
-    guid: 4277868bc1bc1d208bfd3371d9b9abcb
-  - enabled: 0
     path: Assets/Scenes/Curves.unity
     guid: 2c8972b56b63c330ea50acbd33f0d792
   - enabled: 0
     path: Assets/Scenes/Circuit_1.unity
     guid: 7253437f7a5a37e45aaf8eb440c58b46
+  - enabled: 0
+    path: Assets/Scenes/CurvesD1.unity
+    guid: d89146a94bf0bfc0983659f40ced348d
+  - enabled: 0
+    path: Assets/Scenes/Hills.unity
+    guid: 9f1111e629a2bc29aa61749353efcb80
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

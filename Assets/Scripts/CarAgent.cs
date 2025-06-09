@@ -29,8 +29,8 @@ public class CarAgent : Agent
 
 
         //  Recompensar llegar antes y tener velocidad
-        AddReward(-0.005f);
-        AddReward(Mathf.Lerp(0.001f,0.005f,norm_speed.magnitude));
+        AddReward(-0.0005f);
+        AddReward(Mathf.Lerp(0.001f,0.0005f,norm_speed.magnitude));
     }
     public override void OnActionReceived(ActionBuffers actions)
     {

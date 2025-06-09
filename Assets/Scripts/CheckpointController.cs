@@ -32,7 +32,7 @@ public class CheckpointController : MonoBehaviour
             timeout = 20;
         else if(SceneManager.GetActiveScene().name == "CurvesMedium")
             timeout = 15f;
-        else if(SceneManager.GetActiveScene().name == "Curves")
+        else if(SceneManager.GetActiveScene().name == "Curves" || SceneManager.GetActiveScene().name == "CurvesD1")
             timeout = 15f;
         else if(SceneManager.GetActiveScene().name == "Circuit_1")
             timeout = 15f;

@@ -103,3 +103,7 @@ configs/*
 builds/*
 
 drl-tfg_BurstDebugInformation_DoNotShip
+train.sh
+train_launcher.sh
+Assets/CarAgent.onnx
+Assets/Scenes/Plane.unity*
