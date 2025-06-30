@@ -106,7 +106,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1062880273473829619
 Transform:
   m_ObjectHideFlags: 0
@@ -139,6 +139,8 @@ MonoBehaviour:
   - Wall
   - Checkpoint
   - Road
+  - Right
+  - Left
   m_RaysPerDirection: 3
   m_MaxRayDegrees: 15
   m_SphereCastRadius: 0
@@ -170,6 +172,8 @@ MonoBehaviour:
   - Wall
   - Checkpoint
   - Road
+  - Right
+  - Left
   m_RaysPerDirection: 3
   m_MaxRayDegrees: 15
   m_SphereCastRadius: 0
@@ -201,6 +205,8 @@ MonoBehaviour:
   - Wall
   - Checkpoint
   - Road
+  - Right
+  - Left
   m_RaysPerDirection: 3
   m_MaxRayDegrees: 15
   m_SphereCastRadius: 0
@@ -1040,6 +1046,7 @@ MonoBehaviour:
   motorPower: 700
   brakesPower: 100000
   maxSpeed: 30
+  maxSteerAngle: 35
   speed: {x: 0, y: 0, z: 0}
   steerAngle: 0
   decelerationMultiplier: 0.2
@@ -1125,6 +1132,8 @@ MonoBehaviour:
   - Wall
   - Checkpoint
   - Road
+  - Right
+  - Left
   m_RaysPerDirection: 6
   m_MaxRayDegrees: 80
   m_SphereCastRadius: 0
@@ -1156,6 +1165,8 @@ MonoBehaviour:
   - Wall
   - Checkpoint
   - Road
+  - Right
+  - Left
   m_RaysPerDirection: 3
   m_MaxRayDegrees: 7
   m_SphereCastRadius: 0

@@ -20,7 +20,8 @@ public class CarController : MonoBehaviour{
     public Wheel RRWheel;
     public float motorPower;
     public float brakesPower;
-    public float maxSpeed = 30;
+    public float maxSpeed = 30f;
+    public float maxSteerAngle = 35f;
 
     public Vector3 speed;
     public float steerAngle;
@@ -83,16 +84,14 @@ public class CarController : MonoBehaviour{
     }
     
     void steer(){
-        float maxSteerAngle = 35f;
-
         steerAngle = steeringIn*maxSteerAngle;
 
         //  Countersteer
         if (slipAngle < 60f){
             float counterSteer = Vector3.SignedAngle(transform.forward, rb.linearVelocity + transform.forward, Vector3.up);
-            steerAngle += Mathf.Lerp(0, counterSteer, 0.5f);
-
+            steerAngle += counterSteer * 0.5f;
         }
+        
         steerAngle = Mathf.Clamp(steerAngle, -maxSteerAngle, maxSteerAngle);
 
         FLWheel.collider.steerAngle = steerAngle;
@@ -118,14 +117,7 @@ public class CarController : MonoBehaviour{
         float z;
         Quaternion rot;
 
-        if (SceneManager.GetActiveScene().name == "Forward")
-        {
-            x = UnityEngine.Random.Range(2.5f, 7.5f);
-            y = 0.3f;
-            z = -22.2f;
-            rot = new Quaternion();
-        }
-        else if (SceneManager.GetActiveScene().name == "Reorientation")
+        if (SceneManager.GetActiveScene().name == "Reorientation")
         {
             x = 0;
             y = 0.3f;
@@ -137,34 +129,36 @@ public class CarController : MonoBehaviour{
 
             rot = Quaternion.Euler(0, randAngle, 0);
         }
-        else if (SceneManager.GetActiveScene().name == "Plane")
+        else if (SceneManager.GetActiveScene().name == "Circuit1Nice")
         {
-            x = 0f;
+            x = 5f;
             y = 0.3f;
-            z = 0;
+            z = -15f;
             rot = new Quaternion();
-        }
-        else
+        }else
         {
             x = UnityEngine.Random.Range(2.5f, 7.5f);
             y = 0.3f;
-            z = UnityEngine.Random.Range(-37.8f, -22.2f);
+            z = UnityEngine.Random.Range(-17f, -3f);
             rot = new Quaternion();
         }
 
         transform.localPosition = new Vector3(x, y, z);
         transform.rotation = rot;
+
         rb.angularVelocity = Vector3.zero;
-        if (SceneManager.GetActiveScene().name == "Hills")
-            rb.linearVelocity = new Vector3(0, 0, 15);
+        FLWheel.collider.steerAngle = 0f;
+        FRWheel.collider.steerAngle = 0f;
+        if (SceneManager.GetActiveScene().name == "CurvesD0"
+        || SceneManager.GetActiveScene().name == "CurvesD1")
+            rb.linearVelocity = new Vector3(0, 0, UnityEngine.Random.Range(0, 15));
         else
         {
             rb.linearVelocity = Vector3.zero;
             RLWheel.collider.motorTorque = 0f;
             RRWheel.collider.motorTorque = 0f;
         }
-        FLWheel.collider.steerAngle = 0f;
-        FRWheel.collider.steerAngle = 0f;
+        
 
         gasIn = 0f;
         brakeIn = 0f;
@@ -173,6 +167,9 @@ public class CarController : MonoBehaviour{
 
         if (durabilityActive)
             durability = UnityEngine.Random.Range(0, 10);
+        //else
+        //    durability = 10;
+
         WheelFrictionCurve wFriction = new WheelFrictionCurve();
         wFriction.extremumSlip = Mathf.Lerp(0.7f, 0.2f,(float)durability / 10);
         wFriction.asymptoteSlip = 1.2f;

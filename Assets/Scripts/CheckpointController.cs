@@ -25,21 +25,11 @@ public class CheckpointController : MonoBehaviour
 
 
         if(SceneManager.GetActiveScene().name == "Forward")
-            timeout = 120f;
+            timeout = 60f;
         else if(SceneManager.GetActiveScene().name == "Reorientation")
             timeout = 30;
-        else if(SceneManager.GetActiveScene().name == "CurvesLarge")
-            timeout = 20;
-        else if(SceneManager.GetActiveScene().name == "CurvesMedium")
-            timeout = 15f;
-        else if(SceneManager.GetActiveScene().name == "Curves" || SceneManager.GetActiveScene().name == "CurvesD1")
-            timeout = 15f;
-        else if(SceneManager.GetActiveScene().name == "Circuit_1")
-            timeout = 15f;
-        else if(SceneManager.GetActiveScene().name == "Hills")
+        else
             timeout = 10f;
-        else if(SceneManager.GetActiveScene().name == "Circuit_2")
-            timeout = 15f;
 
         time = timeout;
     }
@@ -62,18 +52,15 @@ public class CheckpointController : MonoBehaviour
         time = timeout;
     }
     public void CheckpointTriggered(Checkpoint cp){
-        if(cpDict[cp]){
-            if(SceneManager.GetActiveScene().name == "Reorientation")
-                carAgent.AddReward(1f);
-            else
-                carAgent.AddReward(0.2f);
+        if (cpDict[cp]) {
+            carAgent.AddReward(0.2f);
 
             time = timeout;
             cpDict[cp] = false;
             checkpointsNumber--;
-            if(checkpointsNumber <= 0)
+            if (checkpointsNumber <= 0)
                 carAgent.EndEpisode();
-        }else{
+        } else {
             carAgent.AddReward(-1f);
             carAgent.EndEpisode();
         }

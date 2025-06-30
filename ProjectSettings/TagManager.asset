@@ -7,6 +7,8 @@ TagManager:
   - Wall
   - Checkpoint
   - Road
+  - Right
+  - Left
   layers:
   - Default
   - TransparentFX

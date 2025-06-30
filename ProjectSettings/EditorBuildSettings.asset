@@ -6,26 +6,53 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Forward.unity
+    path: Assets/Scenes/Deprecated/Forward.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
-    path: Assets/Scenes/Circuit_2.unity
+    path: Assets/Scenes/Deprecated/Circuit_2.unity
     guid: a0e327dbe7bb4c92ba12ec8918abe250
   - enabled: 0
-    path: Assets/Scenes/Reorientation.unity
+    path: Assets/Scenes/Deprecated/Reorientation.unity
     guid: 6fecd1ade8b96419cb88299102df038b
   - enabled: 0
-    path: Assets/Scenes/Curves.unity
+    path: Assets/Scenes/Deprecated/Curves.unity
     guid: 2c8972b56b63c330ea50acbd33f0d792
   - enabled: 0
-    path: Assets/Scenes/Circuit_1.unity
+    path: Assets/Scenes/Deprecated/Circuit_1.unity
     guid: 7253437f7a5a37e45aaf8eb440c58b46
   - enabled: 0
-    path: Assets/Scenes/CurvesD1.unity
+    path: Assets/Scenes/Deprecated/CurvesD1.unity
     guid: d89146a94bf0bfc0983659f40ced348d
   - enabled: 0
-    path: Assets/Scenes/Hills.unity
+    path: Assets/Scenes/Deprecated/Hills.unity
     guid: 9f1111e629a2bc29aa61749353efcb80
+  - enabled: 0
+    path: Assets/Scenes/Forward.unity
+    guid: 3b7ba95a2395ebba781697c73352a693
+  - enabled: 0
+    path: Assets/Scenes/Reorientation.unity
+    guid: 09aa385dc5cfa527688e01943f041c43
+  - enabled: 0
+    path: Assets/Scenes/Turn.unity
+    guid: f3e076959465ff932bcc06a570efdfb3
+  - enabled: 1
+    path: Assets/Scenes/Circuit1.unity
+    guid: d29e1639fea73a900affac32f7acb41f
+  - enabled: 0
+    path: Assets/Scenes/Loop.unity
+    guid: 2994a59b79d571cb39e4d8bddd7c363a
+  - enabled: 0
+    path: Assets/Scenes/CurvesD1.unity
+    guid: cb669b89f94fde265b95bf07ce4f6486
+  - enabled: 0
+    path: Assets/Scenes/Hills.unity
+    guid: c35a2c6b3bc7f10759d37e6d1329d210
+  - enabled: 0
+    path: Assets/Scenes/CurvesD0.unity
+    guid: 3998bc710c923d5d6bacd57634a96b4b
+  - enabled: 0
+    path: Assets/Scenes/ForwardTest.unity
+    guid: 4c7582fdcc4e5e52ab4095c11cb4861a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
