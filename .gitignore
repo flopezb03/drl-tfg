@@ -98,8 +98,6 @@ crashlytics-build.properties
 Temp/*
 Logs/*
 
-results/*
-configs/*
 builds/*
 
 drl-tfg_BurstDebugInformation_DoNotShip
